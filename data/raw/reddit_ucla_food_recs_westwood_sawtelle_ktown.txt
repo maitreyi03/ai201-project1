@@ -1,0 +1,16 @@
+SOURCE_TITLE: r/UCLA food recs: Westwood/Sawtelle/Ktown
+SOURCE_URL: https://www.reddit.com/r/ucla/comments/vtr93m/food_recs_westwoodsawtellektown/
+SOURCE_TYPE: Reddit thread
+SOURCE_DESCRIPTION: Reddit thread with UCLA student-style food recommendations around Westwood, Sawtelle, and Koreatown. Useful for student opinions on ramen, udon, casual food spots, and nearby restaurants.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+1. data/raw/reddit_foodla_favorite_sawtelle.txt
+   URL: https://www.reddit.com/r/FoodLosAngeles/comments/1lo0ph9/favorite_restaurants_on_sawtelle/
+   Source type: Reddit discussion thread
+   Focus: Local favorites, ramen, tofu, boba, dessert, value, group-friendly spots.
+
+2. data/raw/reddit_ucla_food_recs_westwood_sawtelle_ktown.txt
+   URL: https://www.reddit.com/r/ucla/comments/vtr93m/food_recs_westwoodsawtellektown/
+   Source type: UCLA Reddit discussion thread
+   Focus: Student recommendations around UCLA, Sawtelle, Westwood, and nearby areas.

@@ -1,0 +1,16 @@
+SOURCE_TITLE: r/FoodLosAngeles: Sawtelle restaurants that are not ramen/noodles/sushi
+SOURCE_URL: https://www.reddit.com/r/FoodLosAngeles/comments/xeno5k/favorite_restaurants_in_sawtelle_that_are_not/
+SOURCE_TYPE: Reddit thread
+SOURCE_DESCRIPTION: Reddit thread focused on Sawtelle food options outside of ramen, noodles, and sushi. Useful for questions about variety and non-ramen choices.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+2. data/raw/reddit_ucla_food_recs_westwood_sawtelle_ktown.txt
+   URL: https://www.reddit.com/r/ucla/comments/vtr93m/food_recs_westwoodsawtellektown/
+   Source type: UCLA Reddit discussion thread
+   Focus: Student recommendations around UCLA, Sawtelle, Westwood, and nearby areas.
+
+3. data/raw/reddit_foodla_not_ramen_sushi.txt
+   URL: https://www.reddit.com/r/FoodLosAngeles/comments/xeno5k/favorite_restaurants_in_sawtelle_that_are_not/
+   Source type: Reddit discussion thread
+   Focus: Non-ramen, non-noodle, and non-sushi Sawtelle options.

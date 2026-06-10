@@ -1,0 +1,16 @@
+SOURCE_TITLE: Time Out: Best Sawtelle Japantown Restaurants
+SOURCE_URL: https://www.timeout.com/los-angeles/restaurants/best-sawtelle-japantown-restaurants
+SOURCE_TYPE: Restaurant guide
+SOURCE_DESCRIPTION: Local guide to Sawtelle restaurants, desserts, and food spots. Useful for popular restaurant recommendations and neighborhood overview.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+9. data/raw/eater_best_sawtelle_japantown.txt
+   URL: https://la.eater.com/maps/essential-best-sawtelle-japantown-restaurants
+   Source type: Local restaurant guide
+   Focus: Current editorial guide to Sawtelle Japantown restaurants.
+
+10. data/raw/timeout_best_sawtelle_restaurants.txt
+    URL: https://www.timeout.com/los-angeles/restaurants/best-sawtelle-japantown-restaurants
+    Source type: Local restaurant guide
+    Focus: Sawtelle restaurants, desserts, boba, ramen, and neighborhood dining overview.
