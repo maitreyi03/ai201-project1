@@ -1,0 +1,16 @@
+SOURCE_TITLE: r/FoodLosAngeles: Sawtelle restaurants tier list
+SOURCE_URL:
+SOURCE_TYPE: Reddit thread
+SOURCE_DESCRIPTION: Opinion-heavy Reddit tier list ranking Sawtelle restaurants. Useful for comparing restaurants, identifying popular spots, and finding overhyped or highly recommended places.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+6. data/raw/reddit_ucla_vegetarian_options_sawtelle_westwood.txt
+URL:
+Source type: UCLA Reddit discussion thread
+Focus: Vegetarian and vegan-friendly options near UCLA, Sawtelle, and Westwood.
+
+7. data/raw/reddit_foodla_sawtelle_tier_list.txt
+URL:
+Source type: Reddit tier-list discussion
+Focus: Opinion-heavy ranking of many Sawtelle restaurants.

@@ -1,0 +1,16 @@
+SOURCE_TITLE: Eater LA: Essential Sawtelle Japantown Restaurants
+SOURCE_URL: https://la.eater.com/maps/essential-best-sawtelle-japantown-restaurants
+SOURCE_TYPE: Restaurant guide
+SOURCE_DESCRIPTION: Curated guide to essential restaurants in Sawtelle Japantown. Useful for broader restaurant coverage, including ramen, Japanese food, Filipino food, Thai food, and other local options.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+8. data/raw/infatuation_best_sawtelle_restaurants.txt
+   URL: https://www.theinfatuation.com/los-angeles/guides/best-sawtelle-restaurants
+   Source type: Local restaurant guide
+   Focus: Structured editorial restaurant guide to Sawtelle Boulevard.
+
+9. data/raw/eater_best_sawtelle_japantown.txt
+   URL: https://la.eater.com/maps/essential-best-sawtelle-japantown-restaurants
+   Source type: Local restaurant guide
+   Focus: Current editorial guide to Sawtelle Japantown restaurants.

@@ -1,0 +1,16 @@
+SOURCE_TITLE: The Infatuation: Best Restaurants on Sawtelle Boulevard
+SOURCE_URL:
+SOURCE_TYPE: Restaurant guide
+SOURCE_DESCRIPTION: Editorial restaurant guide covering recommended Sawtelle restaurants. Useful for structured descriptions of restaurant type, vibe, and standout dishes.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+7. data/raw/reddit_foodla_sawtelle_tier_list.txt
+URL:
+Source type: Reddit tier-list discussion
+Focus: Opinion-heavy ranking of many Sawtelle restaurants.
+
+8. data/raw/infatuation_best_sawtelle_restaurants.txt
+URL:
+Source type: Local restaurant guide
+Focus: Structured editorial restaurant guide to Sawtelle Boulevard.

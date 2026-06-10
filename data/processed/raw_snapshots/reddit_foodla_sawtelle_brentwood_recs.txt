@@ -1,0 +1,16 @@
+SOURCE_TITLE: r/FoodLosAngeles: Recs in Sawtelle/Brentwood
+SOURCE_URL: https://www.reddit.com/r/FoodLosAngeles/comments/1skg5uc/recs_in_sawtellebrentwood/
+SOURCE_TYPE: Reddit thread
+SOURCE_DESCRIPTION: Reddit thread with recent local recommendations for Sawtelle and Brentwood. Useful for updated restaurant suggestions and neighborhood-specific opinions.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+4. data/raw/reddit_ucla_best_food_westwood_santa_monica.txt
+   URL: https://www.reddit.com/r/ucla/comments/1021ux7/best_food_spots_in_the_westwood_santa_monica_area/
+   Source type: UCLA Reddit discussion thread
+   Focus: UCLA student recommendations for Westwood, Sawtelle, and Santa Monica.
+
+5. data/raw/reddit_foodla_sawtelle_brentwood_recs.txt
+   URL: https://www.reddit.com/r/FoodLosAngeles/comments/1skg5uc/recs_in_sawtellebrentwood/
+   Source type: Reddit discussion thread
+   Focus: Recent local recommendations for Sawtelle and Brentwood.

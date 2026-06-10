@@ -1,0 +1,16 @@
+SOURCE_TITLE: r/UCLA: Best food spots in Westwood/Santa Monica area
+SOURCE_URL:
+SOURCE_TYPE: Reddit thread
+SOURCE_DESCRIPTION: UCLA Reddit thread with nearby student food recommendations, including Sawtelle and Westside restaurants. Useful for student-accessible food near UCLA.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+3. data/raw/reddit_foodla_not_ramen_sushi.txt
+URL:
+Source type: Reddit discussion thread
+Focus: Non-ramen, non-noodle, and non-sushi Sawtelle options.
+
+4. data/raw/reddit_ucla_best_food_westwood_santa_monica.txt
+URL:
+Source type: UCLA Reddit discussion thread
+Focus: UCLA student recommendations for Westwood, Sawtelle, and Santa Monica.

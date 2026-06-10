@@ -1,0 +1,16 @@
+SOURCE_TITLE: r/FoodLosAngeles: Favorite restaurants on Sawtelle
+SOURCE_URL:
+SOURCE_TYPE: Reddit thread
+SOURCE_DESCRIPTION: Reddit thread with local opinions on favorite Sawtelle restaurants. Useful for recommendations on ramen, tofu, boba, dessert, and casual restaurants.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+Purpose:
+This source list supports a RAG system that answers unofficial food recommendation questions about Sawtelle. The sources combine UCLA student Reddit threads, Los Angeles food Reddit threads, and local restaurant guides so the system can answer questions about ramen, boba, dessert, vegetarian options, group-friendly spots, wait times, value, and overhyped restaurants.
+
+Source Documents / Raw File Paths:
+
+1. data/raw/reddit_foodla_favorite_sawtelle.txt
+URL:
+Source type: Reddit discussion thread
+Focus: Local favorites, ramen, tofu, boba, dessert, value, group-friendly spots.

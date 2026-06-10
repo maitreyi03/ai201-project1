@@ -1,0 +1,19 @@
+Milestone 3 Summary
+===================
+
+Documents loaded: 10
+Total chunks created: 11
+Chunk size target: 850 characters
+Overlap: 150 characters
+
+Chunks by source:
+- eater_best_sawtelle_japantown.txt: 1 chunks
+- infatuation_best_sawtelle_restaurants.txt: 1 chunks
+- reddit_foodla_favorite_sawtelle.txt: 2 chunks
+- reddit_foodla_not_ramen_sushi.txt: 1 chunks
+- reddit_foodla_sawtelle_brentwood_recs.txt: 1 chunks
+- reddit_foodla_sawtelle_tier_list.txt: 1 chunks
+- reddit_ucla_best_food_westwood_santa_monica.txt: 1 chunks
+- reddit_ucla_food_recs_westwood_sawtelle_ktown.txt: 1 chunks
+- reddit_ucla_vegetarian_options_sawtelle_westwood.txt: 1 chunks
+- timeout_best_sawtelle_restaurants.txt: 1 chunks

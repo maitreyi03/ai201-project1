@@ -1,0 +1,16 @@
+SOURCE_TITLE: r/UCLA: Vegetarian options in Sawtelle/Westwood
+SOURCE_URL:
+SOURCE_TYPE: Reddit thread
+SOURCE_DESCRIPTION: Reddit thread about vegetarian-friendly food options near Sawtelle and Westwood. Useful for questions about vegetarian meals and dietary restrictions.
+SOURCE_FILE_CREATED_FROM: documents/sawtelle_sources.txt
+
+RAW_TEXT:
+5. data/raw/reddit_foodla_sawtelle_brentwood_recs.txt
+URL:
+Source type: Reddit discussion thread
+Focus: Recent local recommendations for Sawtelle and Brentwood.
+
+6. data/raw/reddit_ucla_vegetarian_options_sawtelle_westwood.txt
+URL:
+Source type: UCLA Reddit discussion thread
+Focus: Vegetarian and vegan-friendly options near UCLA, Sawtelle, and Westwood.

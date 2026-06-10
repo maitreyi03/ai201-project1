@@ -23,10 +23,10 @@ After running this script, you should get:
     │       └── timeout_best_sawtelle_restaurants.txt
 
 How to run:
-    python prepare_documents.py
+    python3 prepare_documents.py
 
 Then run:
-    python milestone3_pipeline.py
+    python3 milestone3_pipeline.py
 """
 
 from __future__ import annotations
