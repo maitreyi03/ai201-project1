@@ -122,6 +122,10 @@ This knowledge is hard to find through official channels because restaurant webs
 
 **Reasoning:**
 
+I will split the documents into paragraph-aware chunks of approximately 700–900 characters with an overlap of about 150 characters. This strategy fits my documents because many of the Reddit sources contain short comments or brief recommendations, while the food guide sources contain longer paragraphs describing multiple restaurants. A paragraph-aware approach should preserve complete thoughts better than splitting every fixed number of characters without regard to sentence or paragraph boundaries.
+The overlap is important because restaurant recommendations may include the restaurant name in one sentence and the reason for recommending it in the next sentence. If that information gets split across two chunks, the overlap increases the chance that both the restaurant name and the useful recommendation appear together in at least one retrievable chunk.
+If the chunks are too small, retrieval may return fragments like only a restaurant name without the opinion or context explaining why it is recommended. If the chunks are too large, one chunk may contain too many unrelated restaurants, making semantic search less precise. I will inspect sample chunks after chunking to make sure each chunk is readable, substantive, and useful on its own.
+
 ---
 
 ## Retrieval Approach
@@ -137,6 +141,10 @@ This knowledge is hard to find through official channels because restaurant webs
 **Top-k:**
 
 **Production tradeoff reflection:**
+
+I will split the documents into paragraph-aware chunks of approximately 700–900 characters with an overlap of about 150 characters. This strategy fits my documents because many of the Reddit sources contain short comments or brief recommendations, while the food guide sources contain longer paragraphs describing multiple restaurants. A paragraph-aware approach should preserve complete thoughts better than splitting every fixed number of characters without regard to sentence or paragraph boundaries.
+The overlap is important because restaurant recommendations may include the restaurant name in one sentence and the reason for recommending it in the next sentence. If that information gets split across two chunks, the overlap increases the chance that both the restaurant name and the useful recommendation appear together in at least one retrievable chunk.
+If the chunks are too small, retrieval may return fragments like only a restaurant name without the opinion or context explaining why it is recommended. If the chunks are too large, one chunk may contain too many unrelated restaurants, making semantic search less precise. I will inspect sample chunks after chunking to make sure each chunk is readable, substantive, and useful on its own.
 
 ---
 
@@ -154,6 +162,22 @@ This knowledge is hard to find through official channels because restaurant webs
 | 3   |          |                 |
 | 4   |          |                 |
 | 5   |          |                 |
+
+1.Question: What restaurants are recommended for ramen in Sawtelle?
+Expected answer: The system should mention ramen-focused recommendations such as Tsujita, Tsujita Annex, Tatsu, Killer Noodle, or Menya Tigre, depending on which sources are retrieved. The answer should cite the source documents that mention those restaurants.
+
+2.Question: What are good dessert or sweet snack places in Sawtelle?
+Expected answer: The system should mention dessert or sweet options such as Somi Somi, Millet Crepe, Indigo Cow, or other dessert places that appear in the collected sources. The answer should explain what type of dessert each place is known for when the documents provide that detail.
+
+3.Question: What Sawtelle restaurants are recommended if I do not want ramen, noodles, or sushi?
+Expected answer: The system should retrieve information from the non-ramen/sushi Reddit thread and possibly guide sources. It should recommend alternatives outside of ramen and sushi, such as curry, tofu, okonomiyaki, Filipino food, Thai food, or other non-ramen options mentioned in the documents.
+
+4.Question: What vegetarian-friendly food options are mentioned near Sawtelle or Westwood?
+Expected answer: The system should retrieve the vegetarian-options source and mention vegetarian-friendly places or dishes that appear in the documents. The answer should avoid making unsupported claims if the documents do not give enough detail.
+
+5.Question: Which Sawtelle places do students or locals seem especially excited about or rank highly?
+Expected answer: The system should use opinion-heavy sources such as the Sawtelle tier list and favorite-restaurant Reddit threads. It should identify restaurants that appear repeatedly or are ranked highly, while citing the specific documents used.
+These questions are specific enough to evaluate because each one asks for a clear category of restaurant recommendation. I can compare the system response against the source documents and judge whether the retrieved chunks and generated answer are accurate, partially accurate, or inaccurate.
 
 ---
 
@@ -177,6 +201,11 @@ This knowledge is hard to find through official channels because restaurant webs
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
 
+One challenge is that the documents may be noisy or inconsistent. Reddit comments are informal, may include jokes or incomplete thoughts, and different users may disagree about the same restaurant. This could make it hard for the system to produce a balanced answer if it retrieves only one side of an opinion.
+Another challenge is source attribution. Since some restaurant names may appear in multiple sources, the system needs to clearly show which document each recommendation came from. Without source attribution, a user would not know whether the answer came from a Reddit thread, a curated food guide, or a specific review-style source.
+A third challenge is chunk boundaries. If a restaurant name appears at the end of one chunk and the explanation appears at the beginning of the next chunk, retrieval may return only part of the useful information. The 150-character overlap should help reduce this problem, but I will still need to inspect chunks manually.
+A fourth challenge is off-topic retrieval. Some sources may mention nearby neighborhoods like Westwood, Santa Monica, or Koreatown in addition to Sawtelle. The system might retrieve restaurants outside Sawtelle if the query is broad, so I will need to check whether metadata and source descriptions help keep responses focused.
+
 ---
 
 ## AI Tool Plan
@@ -196,3 +225,10 @@ This knowledge is hard to find through official channels because restaurant webs
 **Milestone 4 — Embedding and retrieval:**
 
 **Milestone 5 — Generation and interface:**
+
+I plan to use AI tools to help implement specific parts of the pipeline, but I will use my own planning document and source decisions as the main guide.
+First, I will prompt ChatGPT or Claude with my Documents section and Chunking Strategy section and ask it to help implement an ingestion script. I will ask it to load .txt files from data/raw, clean unnecessary text, preserve source metadata, and save processed text. I expect the AI tool to produce a Python script, but I will review the code to make sure it matches my file structure and does not remove useful restaurant information.
+Second, I will prompt the AI tool with my Chunking Strategy section and ask it to implement a chunk_text() function using 700–900 character chunks with around 150 characters of overlap. I will specifically ask for paragraph-aware chunking so that chunks do not cut off sentences or restaurant descriptions in awkward places. I will inspect the output chunks manually and revise the function if the chunks are too short, too long, or not meaningful on their own.
+Third, I will prompt the AI tool with my Retrieval Approach section and ask it to help implement the embedding and vector store setup using sentence-transformers, all-MiniLM-L6-v2, and ChromaDB. I expect the AI tool to help create a script that embeds chunks, stores them with source metadata, and retrieves the top 4 chunks for a query. I will test retrieval with my evaluation questions before adding generation.
+Fourth, I will use AI assistance to help write the grounded generation prompt. I will provide the requirement that the LLM must answer only from retrieved context and must cite sources. I expect the AI tool to help draft the prompt template, but I will verify that the final answer format includes source attribution and that the model refuses to answer when the documents do not contain enough information.
+Finally, I may use AI tools to help organize my README and evaluation report. I will give the AI my actual system outputs, retrieved chunks, and accuracy judgments, then ask it to help format the evaluation clearly. I will not ask the AI to invent results; the evaluation will be based on the real behavior of my system.
