@@ -1,0 +1,88 @@
+Milestone 1: Sawtelle Food Recommendations Source List
+
+Domain: Food recommendations in Sawtelle Japantown / Sawtelle Boulevard, Los Angeles
+
+Purpose:
+This source list supports a RAG system that answers unofficial food recommendation questions about Sawtelle. The sources combine UCLA student Reddit threads, Los Angeles food Reddit threads, and local restaurant guides so the system can answer questions about ramen, boba, dessert, vegetarian options, group-friendly spots, wait times, value, and overhyped restaurants.
+
+Source Documents / Raw File Paths:
+
+1. data/raw/reddit_foodla_favorite_sawtelle.txt
+   URL: https://www.reddit.com/r/FoodLosAngeles/comments/1lo0ph9/favorite_restaurants_on_sawtelle/
+   Source type: Reddit discussion thread
+   Focus: Local favorites, ramen, tofu, boba, dessert, value, group-friendly spots.
+
+2. data/raw/reddit_ucla_food_recs_westwood_sawtelle_ktown.txt
+   URL: https://www.reddit.com/r/ucla/comments/vtr93m/food_recs_westwoodsawtellektown/
+   Source type: UCLA Reddit discussion thread
+   Focus: Student recommendations around UCLA, Sawtelle, Westwood, and nearby areas.
+
+3. data/raw/reddit_foodla_not_ramen_sushi.txt
+   URL: https://www.reddit.com/r/FoodLosAngeles/comments/xeno5k/favorite_restaurants_in_sawtelle_that_are_not/
+   Source type: Reddit discussion thread
+   Focus: Non-ramen, non-noodle, and non-sushi Sawtelle options.
+
+4. data/raw/reddit_ucla_best_food_westwood_santa_monica.txt
+   URL: https://www.reddit.com/r/ucla/comments/1021ux7/best_food_spots_in_the_westwood_santa_monica_area/
+   Source type: UCLA Reddit discussion thread
+   Focus: UCLA student recommendations for Westwood, Sawtelle, and Santa Monica.
+
+5. data/raw/reddit_foodla_sawtelle_brentwood_recs.txt
+   URL: https://www.reddit.com/r/FoodLosAngeles/comments/1skg5uc/recs_in_sawtellebrentwood/
+   Source type: Reddit discussion thread
+   Focus: Recent local recommendations for Sawtelle and Brentwood.
+
+6. data/raw/reddit_ucla_vegetarian_options_sawtelle_westwood.txt
+   URL: https://www.reddit.com/r/ucla/comments/yy25ev/vegetarian_options_in_sawtellewestwood/
+   Source type: UCLA Reddit discussion thread
+   Focus: Vegetarian and vegan-friendly options near UCLA, Sawtelle, and Westwood.
+
+7. data/raw/reddit_foodla_sawtelle_tier_list.txt
+   URL: https://www.reddit.com/r/FoodLosAngeles/comments/1byr7wk/sawtelle_restaurants_tier_list_i_made_with_my/
+   Source type: Reddit tier-list discussion
+   Focus: Opinion-heavy ranking of many Sawtelle restaurants.
+
+8. data/raw/infatuation_best_sawtelle_restaurants.txt
+   URL: https://www.theinfatuation.com/los-angeles/guides/best-sawtelle-restaurants
+   Source type: Local restaurant guide
+   Focus: Structured editorial restaurant guide to Sawtelle Boulevard.
+
+9. data/raw/eater_best_sawtelle_japantown.txt
+   URL: https://la.eater.com/maps/essential-best-sawtelle-japantown-restaurants
+   Source type: Local restaurant guide
+   Focus: Current editorial guide to Sawtelle Japantown restaurants.
+
+10. data/raw/timeout_best_sawtelle_restaurants.txt
+    URL: https://www.timeout.com/los-angeles/restaurants/best-sawtelle-japantown-restaurants
+    Source type: Local restaurant guide
+    Focus: Sawtelle restaurants, desserts, boba, ramen, and neighborhood dining overview.
+
+11. data/raw/discover_la_sawtelle_walking_tour.txt
+    URL: https://www.discoverlosangeles.com/things-to-do/a-walking-tour-of-sawtelle-japantown
+    Source type: Local neighborhood guide
+    Focus: Background context and specific restaurant notes for Sawtelle Japantown.
+
+12. data/raw/travelagewest_best_sawtelle_restaurants.txt
+    URL: https://www.travelagewest.com/Travel/USA-Canada/A-Complete-Guide-to-the-Best-Sawtelle-Restaurants
+    Source type: Travel/restaurant guide
+    Focus: Practical restaurant descriptions and advice for Sawtelle restaurants.
+
+Domain Summary:
+I chose food recommendations in Sawtelle Japantown / Sawtelle Boulevard in Los Angeles. This knowledge is valuable because students and locals rely on unofficial recommendations from Reddit, local guides, and word-of-mouth to decide where to eat, especially when they care about value, wait times, best dishes, vegetarian options, group-friendly restaurants, or whether a spot is overhyped.
+
+This information is hard to find through official channels because restaurant websites usually only provide menus, hours, and polished descriptions. They do not clearly explain what UCLA students and local diners repeatedly recommend, what places are considered worth the wait, what restaurants are good for groups, or what spots are overrated.
+
+Questions the System Should Answer:
+1. Which Sawtelle restaurants are best for ramen or tsukemen?
+2. Where should someone go for boba or dessert in Sawtelle?
+3. Which Sawtelle restaurants are good for groups?
+4. Which places are vegetarian-friendly near Sawtelle or Westwood?
+5. What restaurants do students or locals consider overhyped, overpriced, or not worth the wait?
+6. What should someone eat in Sawtelle if they do not want ramen, noodles, or sushi?
+7. Which spots are good value or have large portions?
+8. What are good first-time visitor recommendations for Sawtelle?
+
+Skim Notes:
+The Reddit documents are mostly short reviews and direct recommendations. Key facts are often concentrated in one sentence, such as a diner saying a place is good for groups, overpriced, overhyped, or worth the line.
+
+The editorial restaurant guides are longer and more structured. They usually organize information by restaurant, with key details spread across full paragraphs, so future chunking should preserve each restaurant section instead of splitting every few words.
