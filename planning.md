@@ -206,6 +206,24 @@ Another challenge is source attribution. Since some restaurant names may appear 
 A third challenge is chunk boundaries. If a restaurant name appears at the end of one chunk and the explanation appears at the beginning of the next chunk, retrieval may return only part of the useful information. The 150-character overlap should help reduce this problem, but I will still need to inspect chunks manually.
 A fourth challenge is off-topic retrieval. Some sources may mention nearby neighborhoods like Westwood, Santa Monica, or Koreatown in addition to Sawtelle. The system might retrieve restaurants outside Sawtelle if the query is broad, so I will need to check whether metadata and source descriptions help keep responses focused.
 
+The system follows a five-stage RAG pipeline: Document Ingestion → Chunking → Embedding + Vector Store → Retrieval → Generation. Each stage is labeled with the tool or library used in this project.
+flowchart TD
+A[1. Document Ingestion<br/>Tool: Python pathlib + re + html<br/>Input: data/raw/*.txt<br/>Output: cleaned text files]
+--> B[2. Chunking<br/>Tool: Custom Python paragraph-aware chunker<br/>Chunk size: 700-900 characters<br/>Overlap: 150 characters]
+
+    B --> C[3. Embedding + Vector Store<br/>Embedding model: sentence-transformers/all-MiniLM-L6-v2<br/>Vector DB: ChromaDB<br/>Stores: chunk text + source metadata]
+
+    C --> D[4. Retrieval<br/>Tool: ChromaDB similarity search<br/>Method: semantic search<br/>Top-k: 4 chunks per query]
+
+    D --> E[5. Generation<br/>LLM: Groq llama-3.3-70b-versatile<br/>Prompt: answer only from retrieved chunks<br/>Output: grounded answer with source citations]
+
+Plain-language pipeline explanation:
+Document Ingestion: The system loads .txt files from data/raw/ using Python. These files contain Sawtelle food recommendation sources such as Reddit threads and local restaurant guides. The ingestion script cleans unnecessary text such as HTML tags, links, cookie text, navigation text, and repeated boilerplate.
+Chunking: The cleaned documents are split into paragraph-aware chunks of about 700–900 characters with around 150 characters of overlap. This keeps restaurant names, opinions, and recommendation details together while avoiding chunks that are too large or too fragmented.
+Embedding + Vector Store: Each chunk is embedded using all-MiniLM-L6-v2 from sentence-transformers. The embeddings, chunk text, and source metadata are stored in ChromaDB.
+Retrieval: When a user asks a question, the system embeds the query and uses ChromaDB semantic similarity search to retrieve the top 4 most relevant chunks.
+Generation: The retrieved chunks are passed to Groq’s llama-3.3-70b-versatile model. The model is instructed to answer only using the retrieved context and to include source attribution so the response stays grounded in the collected documents.
+
 ---
 
 ## AI Tool Plan
